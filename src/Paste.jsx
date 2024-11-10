@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import PasteCard from './pasteCard';
+import PasteCard from './PasteCard';
 import {setPop} from './redux/popslice';
 import Popup from './Popup';
 

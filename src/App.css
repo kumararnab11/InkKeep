@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(45deg, black, rgb(31, 31, 83));
+  background-size: 300% 300%;
+  animation: backgroundAnimation 10s ease infinite;
+}
+
+/* Define the keyframes for the background animation */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

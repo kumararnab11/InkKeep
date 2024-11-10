@@ -20,22 +20,27 @@ function Home() {
   },[pasteId])
 
   const createPaste = () => {
-    const paste = {
-      title:title,
-      content: value,
-      _id: pasteId || Date.now().toString(20),
-      createdAt: new Date().toISOString(),
-    };
-
-    if (pasteId) {
-      dispatch(updatePastes(paste));
-    } else {
-      dispatch(addToPastes(paste));
+    if(!title||!value){
+      toast.error("Write your Content first");
     }
-
-    setTitle('');
-    setSearchParam({});
-    setValue('');
+    else{
+      const paste = {
+        title:title,
+        content: value,
+        _id: pasteId || Date.now().toString(20),
+        createdAt: new Date().toISOString(),
+      };
+  
+      if (pasteId) {
+        dispatch(updatePastes(paste));
+      } else {
+        dispatch(addToPastes(paste));
+      }
+  
+      setTitle('');
+      setSearchParam({});
+      setValue('');
+    }
   };
 
   return (
